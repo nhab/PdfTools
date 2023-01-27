@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using iTextSharp.text.pdf.parser;
+using iTextSharp.text.pdf;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -26,15 +28,45 @@ namespace pdf.Controllers
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
+            string PdfFileSpecification = "c:\\Root\\CSharpNotesForProfessionals.pdf";
             var rng = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),
-                TemperatureC = rng.Next(-20, 55),
-                Summary = Summaries[rng.Next(Summaries.Length)]
-            })
-            .ToArray();
+                TemperatureC =index,
+                Summary = pdfText(PdfFileSpecification, index) //Summaries[rng.Next(Summaries.Length)]
+            });
+           
         }
 
+        //[HttpGet]
+        //public IEnumerable<WeatherForecast> Get2( int page=0)
+        //{
+        //    string PdfFileSpecification = "c:\\Root\\CSharpNotesForProfessionals.pdf";
+        //    var rng = new Random();
+        //    int num = 5;
+        //    return Enumerable.Range(page*num+1, (page+1*num)).Select(index => new WeatherForecast
+        //    {
+        //        Date = DateTime.Now.AddDays(index),
+        //        TemperatureC = rng.Next(-20, 55),
+        //        Summary = pdfText(PdfFileSpecification, index) //Summaries[rng.Next(Summaries.Length)]
+        //    });
+
+        //}
+
+        private static int getpages(string path)
+        {
+            PdfReader reader = new PdfReader(path);
+            string text = string.Empty;
+            return reader.NumberOfPages;
+        }
+        private static string pdfText(string path,int page)
+        {
+            PdfReader reader = new PdfReader(path);
+            string text = PdfTextExtractor.GetTextFromPage(reader, page);
+            
+            reader.Close();
+            return text;
+        }
     }
 }
