@@ -39,6 +39,38 @@
           }
         }
       },
+      "PdfPig/0.1.7": {
+        "runtime": {
+          "lib/net6.0/UglyToad.PdfPig.Core.dll": {
+            "assemblyVersion": "0.1.7.0",
+            "fileVersion": "0.1.7.0"
+          },
+          "lib/net6.0/UglyToad.PdfPig.DocumentLayoutAnalysis.dll": {
+            "assemblyVersion": "0.1.7.0",
+            "fileVersion": "0.1.7.0"
+          },
+          "lib/net6.0/UglyToad.PdfPig.Fonts.dll": {
+            "assemblyVersion": "0.1.7.0",
+            "fileVersion": "0.1.7.0"
+          },
+          "lib/net6.0/UglyToad.PdfPig.Package.dll": {
+            "assemblyVersion": "0.1.5.0",
+            "fileVersion": "0.1.5.0"
+          },
+          "lib/net6.0/UglyToad.PdfPig.Tokenization.dll": {
+            "assemblyVersion": "0.1.7.0",
+            "fileVersion": "0.1.7.0"
+          },
+          "lib/net6.0/UglyToad.PdfPig.Tokens.dll": {
+            "assemblyVersion": "0.1.7.0",
+            "fileVersion": "0.1.7.0"
+          },
+          "lib/net6.0/UglyToad.PdfPig.dll": {
+            "assemblyVersion": "0.1.7.0",
+            "fileVersion": "0.1.7.0"
+          }
+        }
+      },
       "Selenium.Chrome.WebDriver/2.31.0": {},
       "Selenium.Firefox.WebDriver/0.18.0": {},
       "Selenium.WebDriver/3.5.2": {
@@ -73,6 +105,13 @@
       "sha512": "sha512-vtnMhTEJdZFCkLqaQLjD8aqTBIVKHPrSFuSXnxbLEJlvE/j/l88fvG9wtsejXTmhtErMo0lA9T2LdfdfbwplYw==",
       "path": "itextsharp/5.5.13.3",
       "hashPath": "itextsharp.5.5.13.3.nupkg.sha512"
+    },
+    "PdfPig/0.1.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2M8tzSADUranzgYuhRcWPWgqqpGLPdT7+R6Rzq1PKS/djHIlOuCW1GH5hy6sLYqXJE9vYwOyiFgyP5IjJp2IbQ==",
+      "path": "pdfpig/0.1.7",
+      "hashPath": "pdfpig.0.1.7.nupkg.sha512"
     },
     "Selenium.Chrome.WebDriver/2.31.0": {
       "type": "package",
