@@ -1,0 +1,120 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "pdf-win/1.0.0": {
+        "dependencies": {
+          "Browser": "1.0.0",
+          "iTextSharp": "5.5.13.3"
+        },
+        "runtime": {
+          "pdf-win.dll": {}
+        }
+      },
+      "BouncyCastle/1.8.9": {
+        "runtime": {
+          "lib/BouncyCastle.Crypto.dll": {
+            "assemblyVersion": "1.8.9.0",
+            "fileVersion": "1.8.20343.1"
+          }
+        }
+      },
+      "Browser/1.0.0": {
+        "dependencies": {
+          "Selenium.Chrome.WebDriver": "2.31.0",
+          "Selenium.Firefox.WebDriver": "0.18.0",
+          "Selenium.WebDriver": "3.5.2",
+          "Selenium.WebDriver.IEDriver": "3.5.1"
+        },
+        "runtime": {
+          "lib/net461/Browser.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "iTextSharp/5.5.13.3": {
+        "dependencies": {
+          "BouncyCastle": "1.8.9"
+        },
+        "runtime": {
+          "lib/itextsharp.dll": {
+            "assemblyVersion": "5.5.13.3",
+            "fileVersion": "5.5.13.3"
+          }
+        }
+      },
+      "Selenium.Chrome.WebDriver/2.31.0": {},
+      "Selenium.Firefox.WebDriver/0.18.0": {},
+      "Selenium.WebDriver/3.5.2": {
+        "runtime": {
+          "lib/net40/WebDriver.dll": {
+            "assemblyVersion": "3.5.2.0",
+            "fileVersion": "3.5.2.0"
+          }
+        }
+      },
+      "Selenium.WebDriver.IEDriver/3.5.1": {}
+    }
+  },
+  "libraries": {
+    "pdf-win/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BouncyCastle/1.8.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-axnBgvdD5n+FnEG6efk/tfKuMFru7R/EoISH9zjh319yb3HD24TEHSAbNN/lTRT2ulOGRxDgOsCjkuk08iwWPg==",
+      "path": "bouncycastle/1.8.9",
+      "hashPath": "bouncycastle.1.8.9.nupkg.sha512"
+    },
+    "Browser/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-nBVc9Om7uM0s/7ld0I+433oodPMZvwAQ6kqgac4s4n4bSEBn9irwdiqIs0V+fXmNq6//UgfAbqb4CI+yfppbnw==",
+      "path": "browser/1.0.0",
+      "hashPath": "browser.1.0.0.nupkg.sha512"
+    },
+    "iTextSharp/5.5.13.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vtnMhTEJdZFCkLqaQLjD8aqTBIVKHPrSFuSXnxbLEJlvE/j/l88fvG9wtsejXTmhtErMo0lA9T2LdfdfbwplYw==",
+      "path": "itextsharp/5.5.13.3",
+      "hashPath": "itextsharp.5.5.13.3.nupkg.sha512"
+    },
+    "Selenium.Chrome.WebDriver/2.31.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gXP25mgYDYeMPsRc0bBplMvD+HNMApnWE1ZmSEmxZj0OrNY0Gb0JuX+jiYU6nGVzorc33EU+/TGVjEZC2D158g==",
+      "path": "selenium.chrome.webdriver/2.31.0",
+      "hashPath": "selenium.chrome.webdriver.2.31.0.nupkg.sha512"
+    },
+    "Selenium.Firefox.WebDriver/0.18.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gMMVPxHS/CzmO2Po0IVzUWU1GbSBMalQkC1S5jSpfrqCm6d9aSVG0GoV3Dtl6fSxcK/AFK136Cd2UDUPv6dngw==",
+      "path": "selenium.firefox.webdriver/0.18.0",
+      "hashPath": "selenium.firefox.webdriver.0.18.0.nupkg.sha512"
+    },
+    "Selenium.WebDriver/3.5.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-WIk71dD2lTXtZLALV68WGWqtNPOQ5HrpItrqzkRCKoH0YozU1zXydHWRD0jm8w1m9JAsfs6qPO/DhpP+0lEEtw==",
+      "path": "selenium.webdriver/3.5.2",
+      "hashPath": "selenium.webdriver.3.5.2.nupkg.sha512"
+    },
+    "Selenium.WebDriver.IEDriver/3.5.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-NUuPaFtcQBSJHUn91wDGoVgZsAgWSMTGypgFav3uGWlf/iVdu45JK/3pq8Bv7tIJ/IFVUOTrBVlsMT6uod972A==",
+      "path": "selenium.webdriver.iedriver/3.5.1",
+      "hashPath": "selenium.webdriver.iedriver.3.5.1.nupkg.sha512"
+    }
+  }
+}
