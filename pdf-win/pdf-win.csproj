@@ -13,6 +13,7 @@
     <PackageReference Include="Browser" Version="1.0.0" />
     <PackageReference Include="iTextSharp" Version="5.5.13.3" />
     <PackageReference Include="PdfPig" Version="0.1.7" />
+    <PackageReference Include="sautinsoft.pdffocus" Version="8.6.1.18" />
   </ItemGroup>
 
 </Project>

@@ -1,7 +1,4 @@
-using iTextSharp.text.pdf.parser;
 using iTextSharp.text.pdf;
-using System.Windows.Forms;
-using System.IO;
 using pdf_win.Utils;
 
 namespace pdf_win
@@ -26,17 +23,22 @@ namespace pdf_win
             openFileDialog1.ShowDialog();
 
             pdffilepath = openFileDialog1.FileName;
-            reader = new PdfReader(pdffilepath);
-            pageCount = reader.NumberOfPages;
-            string s= TextSharpUtils.pdfText(reader ,page);
-            //Summaries[rng.Next(Summaries.Length)]
+            ////reader = new PdfReader(pdffilepath);
+            ////pageCount = reader.NumberOfPages;
+            ////string s= TextSharpUtils.pdfText(reader ,page);      //Summaries[rng.Next(Summaries.Length)]
 
-            string sHtml = "<pre>"+s+"</pre>";// "<h2 style='textalign=:center;' >Hello</h2>";
-            webBrowser = new WebBrowser();
-            BrowserUtils.CreateBrowser(ref webBrowser, this.Width, this.Height, 40);
-             this.Controls.Add(webBrowser);
-            BrowserUtils.ShowInBrowser(webBrowser, sHtml);
-         
+            ////string sHtml = "<pre>"+s+"</pre>";// "<h2 style='textalign=:center;' >Hello</h2>";
+            ////webBrowser = new WebBrowser();
+            ////BrowserUtils.CreateBrowser(ref webBrowser, this.Width, this.Height, 40);
+            //// this.Controls.Add(webBrowser);
+            ////BrowserUtils.ShowInBrowser(webBrowser, sHtml);
+            ///
+            SautinSoft.PdfFocus f = new SautinSoft.PdfFocus();
+            f.OpenPdf(pdffilepath);
+            string outFile= pdffilepath.Substring(0, pdffilepath.LastIndexOf("\\")) + "\\output.html";
+            f.ToHtml(outFile);
+
+           
         }
 
         private void btnNext_Click(object sender, EventArgs e)
