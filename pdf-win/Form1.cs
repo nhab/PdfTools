@@ -23,19 +23,11 @@ namespace pdf_win
             openFileDialog1.ShowDialog();
 
             pdffilepath = openFileDialog1.FileName;
-            ////reader = new PdfReader(pdffilepath);
-            ////pageCount = reader.NumberOfPages;
-            ////string s= TextSharpUtils.pdfText(reader ,page);      //Summaries[rng.Next(Summaries.Length)]
-
-            ////string sHtml = "<pre>"+s+"</pre>";// "<h2 style='textalign=:center;' >Hello</h2>";
-            ////webBrowser = new WebBrowser();
-            ////BrowserUtils.CreateBrowser(ref webBrowser, this.Width, this.Height, 40);
-            //// this.Controls.Add(webBrowser);
-            ////BrowserUtils.ShowInBrowser(webBrowser, sHtml);
-            ///
+         
             SautinSoft.PdfFocus f = new SautinSoft.PdfFocus();
             f.OpenPdf(pdffilepath);
-            string outFile= pdffilepath.Substring(0, pdffilepath.LastIndexOf("\\")) + "\\output.html";
+            string outFile = pdffilepath.Substring(0, pdffilepath.LastIndexOf("\\"));
+            outFile+= pdffilepath.Substring( pdffilepath.LastIndexOf("\\"), pdffilepath.LastIndexOf(".")- pdffilepath.LastIndexOf("\\")-1) + ".html";
             f.ToHtml(outFile);
 
            
